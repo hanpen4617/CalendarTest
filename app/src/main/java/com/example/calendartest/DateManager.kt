@@ -7,7 +7,7 @@ class DateManager {
 
     //現在の状態を保持
     var startDate = mCalendar.time
-    fun  getDays():List<Date> {
+    fun  getCalendar():List<Date> {
         //当月のセルの総数
         var count = mCalendar.getActualMaximum(Calendar.WEEK_OF_MONTH) * 7
         //当月の１日をmCalendarにセット
@@ -24,9 +24,8 @@ class DateManager {
             mCalendar.add(Calendar.DATE, 1)
         }
         mCalendar.setTime(startDate);
+        //当月のカレンダーがリストで返される
         return list
     }
-    fun getWeeks(): Int {
-        return mCalendar.getActualMaximum(Calendar.WEEK_OF_MONTH)
-    }
+
 }
