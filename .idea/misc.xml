@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/korou/AndroidStudioProjects/CalendarTest/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/arrow_left.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/arrow_right.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/border.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/calendar_cell.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/hanbergar_menu.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/ic_baseline_chevron_right_24.xml" value="0.105" />
+        <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/drawable/main_background.xml" value="0.105" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/mao/AndroidStudioProjects/CalendarTest/app/src/main/res/layout/calendar_cell.xml" value="0.33" />

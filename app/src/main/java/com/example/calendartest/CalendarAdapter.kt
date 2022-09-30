@@ -1,12 +1,14 @@
 package com.example.calendartest
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
+import java.util.Locale;
+import java.text.SimpleDateFormat
 import java.util.*
 
 class CalendarAdapter(context: Context) :BaseAdapter(){
@@ -20,15 +22,15 @@ class CalendarAdapter(context: Context) :BaseAdapter(){
     }
 
     override fun getCount(): Int {
-        TODO("Not yet implemented")
+        return dateArray.size
     }
 
-    override fun getItem(position: Int): Any {
-        TODO("Not yet implemented")
+    override fun getItem(position: Int): Any? {
+        return null;
     }
 
     override fun getItemId(position: Int): Long {
-        TODO("Not yet implemented")
+        return 0
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
@@ -45,6 +47,31 @@ class CalendarAdapter(context: Context) :BaseAdapter(){
         }
         //ここから具体的なデータを入れる処理
 
+        //日付を表示させる処理↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+        //日付表示のフォーマット作成
+        var dateFormat: SimpleDateFormat = SimpleDateFormat("d", Locale.US)
+        holder.text.setText(dateFormat.format(dateArray[position]))
+        //↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+        //当月以外の日付の背景を灰色にする↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+        if (convert != null) {
+            if (mDateManager.isCurrentMonth(dateArray.get(position))) {
+                convert.setBackgroundColor(Color.WHITE)
+            } else {
+                convert.setBackgroundColor(Color.LTGRAY)
+            }
+        }
+        //↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+        //土日の時文字色を変更する↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+        val colorId:Int
+        when(mDateManager.getDayOfWeek(dateArray.get(position))){
+            1    -> colorId = Color.RED
+            7    -> colorId = Color.BLUE
+            else -> colorId = Color.BLACK
+        }
+        holder.text.setTextColor(colorId)
+        //↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
         return convert
     }
 

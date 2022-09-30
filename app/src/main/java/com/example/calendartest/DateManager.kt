@@ -1,5 +1,7 @@
 package com.example.calendartest
 
+import java.text.SimpleDateFormat
+import java.time.temporal.ValueRange
 import java.util.*
 
 class DateManager {
@@ -19,13 +21,29 @@ class DateManager {
         mCalendar.add(Calendar.DATE, -dayOfWeek)
         //Date型の可変リスト作って　・来月分の追加日はこの後のfor文で自動的に追加される
         var list = mutableListOf<Date>()
-        for (i in 0..count) {
+        for (i in 0..count-1) {
             list.add(mCalendar.time)
             mCalendar.add(Calendar.DATE, 1)
         }
         mCalendar.setTime(startDate);
         //当月のカレンダーがリストで返される
         return list
+    }
+
+    fun isCurrentMonth(date: Date): Boolean{
+        val format = SimpleDateFormat("yyyy.MM", Locale.US)
+        val currentMonth = format.format(mCalendar.time)
+        if(currentMonth.equals(format.format(date))){
+            return true
+        } else {
+            return false
+        }
+    }
+
+    fun getDayOfWeek(date: Date): Int{
+        val calendar = Calendar.getInstance()
+        calendar.setTime(date)
+        return calendar.get(Calendar.DAY_OF_WEEK)
     }
 
 }

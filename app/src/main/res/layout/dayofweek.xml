@@ -9,9 +9,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="月"
+        android:text="日"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#ff0000"
         android:textStyle="bold" />
 
     <TextView
@@ -20,9 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="火"
+        android:text="月"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="水"
+        android:text="火"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -42,9 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="木"
+        android:text="水"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -53,9 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="金"
+        android:text="木"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -64,9 +64,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="土"
+        android:text="金"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <TextView
@@ -75,8 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/border"
-        android:text="日"
+        android:text="土"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#0067c0"
         android:textStyle="bold" />
 </LinearLayout>
